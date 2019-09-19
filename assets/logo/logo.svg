@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14"
+   sodipodi:docname="logo.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#4c4c4c"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="-101.03649"
+     inkscape:cy="691.54893"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showborder="false"
+     inkscape:window-width="1598"
+     inkscape:window-height="873"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot815"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:'Arial MT';-inkscape-font-specification:'Arial MT';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="scale(0.26458333)"
+       inkscape:export-xdpi="126.73921"
+       inkscape:export-ydpi="126.73921"><flowRegion
+         id="flowRegion817"><rect
+           id="rect819"
+           width="2100"
+           height="657.14288"
+           x="-211.42857"
+           y="322.51968" /></flowRegion><flowPara
+         id="flowPara821"
+         style="font-size:64.00000081px;-inkscape-font-specification:'RobotoMono Nerd Font';font-family:'RobotoMono Nerd Font';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"><flowSpan
+           style="fill:#e19ef5;fill-opacity:1"
+           id="flowSpan823">diff</flowSpan><flowSpan
+           style="fill:#e9d994;fill-opacity:1"
+           id="flowSpan829">.</flowSpan><flowSpan
+           style="fill:#a3eea0;fill-opacity:1"
+           id="flowSpan825">merge</flowSpan><flowSpan
+           style="fill:#e9d994;fill-opacity:1"
+           id="flowSpan831">.</flowSpan><flowSpan
+           style="fill:#f9867b;fill-opacity:1"
+           id="flowSpan827">close</flowSpan></flowPara></flowRoot>  </g>
+</svg>

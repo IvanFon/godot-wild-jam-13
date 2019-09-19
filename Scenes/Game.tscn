@@ -119,6 +119,13 @@ margin_right = 860.0
 margin_bottom = 640.0
 text = "Close"
 
+[node name="RequestList" type="ItemList" parent="PullRequest"]
+margin_left = 920.0
+margin_top = 60.0
+margin_right = 1240.0
+margin_bottom = 600.0
+max_columns = 2
+
 [node name="LabelTimer" type="Timer" parent="."]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="Start/StartButton" to="." method="_on_StartButton_pressed"]

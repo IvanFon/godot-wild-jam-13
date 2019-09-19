@@ -22,6 +22,11 @@ func _ready() -> void:
 	$PullRequest/DiffText.text = level.DATA.diffs[curDiff].diff
 	$Timer.wait_time = level.DATA.time
 	$TimeLabel.set_text(String($Timer.wait_time) + ' seconds')
+	# Pull request list
+	for d in level.DATA.diffs:
+		$PullRequest/RequestList.add_item(d.id, null, false)
+		$PullRequest/RequestList.add_item('Pending', null, false)
+	$PullRequest/RequestList.set_item_text(1, 'In progress...')
 
 
 func next_diff(correct: bool) -> void:
@@ -30,9 +35,13 @@ func next_diff(correct: bool) -> void:
 	else:
 		if correct:
 			$OrigText.text = level.DATA.diffs[curDiff].code
+			$PullRequest/RequestList.set_item_text((curDiff * 2) + 1, 'Merged')
+		else:
+			$PullRequest/RequestList.set_item_text((curDiff * 2) + 1, 'Closed')
 		
 		curDiff += 1
 		$PullRequest/DiffText.text = level.DATA.diffs[curDiff].diff
+		$PullRequest/RequestList.set_item_text((curDiff * 2) + 1, 'In progress...')
 
 
 func game_over() -> void:

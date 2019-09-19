@@ -38,6 +38,7 @@ Megacorp Industries
 	'diffs': [
 		{
 			'correct': true,
+			'id': '00d15b5',
 			'code': """function sum(a, b) {
   // Add two numbers
   return a + b;
@@ -56,6 +57,7 @@ index d81e0a1..00d15b5 100644
 		},
 		{
 			'correct': false,
+			'id': 'ac2aa78',
 			'code': """function sum(a, b) {
   // Add two numbers
   return a - b;
@@ -75,6 +77,7 @@ index 00d15b5..ac2aa78 100644
 		},
 		{
 			'correct': true,
+			'id': '0abbdbd',
 			'code': """function sum(first, second) {
   // Add two numbers
   sum = first + second;
@@ -97,6 +100,7 @@ index 00d15b5..0abbdbd 100644
 		},
 		{
 			'correct': false,
+			'id': '8ac60e9',
 			'code': """function sum(a, b) {
   // Add two numbers
   first = a;
@@ -122,6 +126,7 @@ index 0abbdbd..8ac60e9 100644
 		},
 		{
 			'correct': true,
+			'id': 'b866d57',
 			'code': """function sum(first, second) {
   // Add two numbers
   sum = 0;
@@ -153,6 +158,7 @@ index 0abbdbd..b866d57 100644
 		},
 		{
 			'correct': false,
+			'id': '1f00693',
 			'code': """/* Adds two numbers together.
  *
  * Arguments:

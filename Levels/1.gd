@@ -3,13 +3,21 @@ const DATA = {
 To: You
 ---
 
-This function needs to take two numbers and return their sum.
+This function needs to take two numbers and return their sum. The current code""" +\
+""" is displayed above this email.
 
 You will receive a series of pull requests. Each pull request contains proposed""" + \
 ' changes to the code. You will be able to merge (accept) the pull request, or' + \
 """ close (deny) the pull request.
 
-Your job is to merge as many changes as you can, without breaking the code.
+The green lines (starting with a +) are lines that are to be added.
+
+The red lines (starting with a -) are lines that are to be removed.
+
+Your job is to evaluate the changes in each pull request.
+
+You must merge as many changes as you can, without breaking the code. Don't worry""" + \
+""" about anything like code style or variable names, just make sure the code works.
 
 If you merge broken code, you will be fired.
 
@@ -26,7 +34,7 @@ Megacorp Industries
 	'orig': """function sum(a, b) {
   return a + b;
 }""",
-	'time': 30,
+	'time': 60,
 	'diffs': [
 		{
 			'correct': true,

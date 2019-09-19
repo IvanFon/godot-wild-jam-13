@@ -1,0 +1,9 @@
+diff --git a/1.js b/2.js
+index d81e0a1..00d15b5 100644
+--- a/1.js
++++ b/2.js
+@@ -1,3 +1,4 @@
+ function sum(a, b) {
++  // Add two numbers
+   return a + b;
+ }

@@ -1,0 +1,48 @@
+diff --git a/6.js b/7.js
+index b866d57..1f00693 100644
+--- a/6.js
++++ b/7.js
+@@ -1,10 +1,40 @@
++/* Adds two numbers together.
++ *
++ * Arguments:
++ *  first - first number to be added
++ *  second - second number to be added
++ *
++ * Returns:
++ *  Sum of both numbers.
++ */
+ function sum(first, second) {
+-  // Add two numbers
++  // Copy numbers for improved efficiency
++  a = first;
++  b = second;
++
++  // Validate input to ensure that arguments are numbers
++  /// @TODO: check if numbers are within specified range
++  assert(typeof(a) === 'number');
++  assert(typeof(b) === 'number');
++
++  log('Adding numbers');
++
++  // Generate sum of both numbers
+   sum = 0;
++  sum = sum + a;
++  sum = sum + b;
++
++  // Programatically generate sum using proprietary array-looping algorithm
++  total = 0;
+   numbers = [first, second];
+   for (i = 0; i < numbers.length; i++) {
+-    sum = sum + numbers[i];
++    total = total + numbers[i];
+   }
+ 
+-  return sum;
++  // Validate that sum was correctly calculated
++  assert(sum === a + b);
++  assert(sum === total);
++
++  // Return calculated sum of both numbers
++  return a * b;
+ }

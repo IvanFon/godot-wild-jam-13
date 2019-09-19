@@ -1,0 +1,16 @@
+diff --git a/4.js b/6.js
+index 0abbdbd..b866d57 100644
+--- a/4.js
++++ b/6.js
+@@ -1,5 +1,10 @@
+ function sum(first, second) {
+   // Add two numbers
+-  sum = first + second;
++  sum = 0;
++  numbers = [first, second];
++  for (i = 0; i < numbers.length; i++) {
++    sum = sum + numbers[i];
++  }
++
+   return sum;
+ }

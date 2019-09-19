@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/Inter-Regular.ttf" type="DynamicFontData" id=2]
@@ -14,6 +14,12 @@ use_filter = true
 extra_spacing_top = -2
 extra_spacing_bottom = -2
 extra_spacing_char = -1
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+use_mipmaps = true
+use_filter = true
 font_data = ExtResource( 2 )
 
 [node name="Game" type="Control"]
@@ -128,8 +134,82 @@ margin_bottom = 600.0
 max_columns = 2
 
 [node name="LabelTimer" type="Timer" parent="."]
+
+[node name="GameOverDialog" type="PopupDialog" parent="."]
+pause_mode = 2
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -112.5
+margin_top = -50.0
+margin_right = 112.5
+margin_bottom = 50.0
+popup_exclusive = true
+
+[node name="VSplitContainer" type="VSplitContainer" parent="GameOverDialog"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -66.0
+margin_top = -31.0
+margin_right = 66.0
+margin_bottom = 31.0
+dragger_visibility = 1
+
+[node name="Label" type="Label" parent="GameOverDialog/VSplitContainer"]
+margin_right = 132.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 3 )
+text = "Game Over!"
+
+[node name="GameOverButton" type="Button" parent="GameOverDialog/VSplitContainer"]
+margin_top = 42.0
+margin_right = 132.0
+margin_bottom = 62.0
+text = "Restart"
+
+[node name="WinDialog" type="PopupDialog" parent="."]
+pause_mode = 2
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -137.5
+margin_top = -50.0
+margin_right = 137.5
+margin_bottom = 50.0
+popup_exclusive = true
+
+[node name="VSplitContainer" type="VSplitContainer" parent="WinDialog"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -93.0
+margin_top = -31.0
+margin_right = 93.0
+margin_bottom = 31.0
+dragger_visibility = 1
+
+[node name="Label" type="Label" parent="WinDialog/VSplitContainer"]
+margin_right = 186.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 3 )
+text = "Congratulations!"
+
+[node name="NextLevelButton" type="Button" parent="WinDialog/VSplitContainer"]
+margin_top = 42.0
+margin_right = 186.0
+margin_bottom = 62.0
+text = "Next Level"
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="Start/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="PullRequest/MergeButton" to="." method="_on_MergeButton_pressed"]
 [connection signal="pressed" from="PullRequest/CloseButton" to="." method="_on_CloseButton_pressed"]
 [connection signal="timeout" from="LabelTimer" to="." method="_on_LabelTimer_timeout"]
+[connection signal="pressed" from="GameOverDialog/VSplitContainer/GameOverButton" to="." method="_on_GameOverButton_pressed"]
+[connection signal="pressed" from="WinDialog/VSplitContainer/NextLevelButton" to="." method="_on_NextLevelButton_pressed"]

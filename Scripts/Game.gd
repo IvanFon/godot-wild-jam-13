@@ -32,27 +32,29 @@ func _ready() -> void:
 
 
 func next_diff(correct: bool) -> void:
+	if correct:
+		$OrigText.text = level.DATA.diffs[curDiff].code
+		$PullRequest/RequestList.set_item_text((curDiff * 2) + 1, 'Merged')
+	else:
+		$PullRequest/RequestList.set_item_text((curDiff * 2) + 1, 'Closed')
+			
 	if curDiff == len(level.DATA.diffs) - 1:
 		next_level()
-	else:
-		if correct:
-			$OrigText.text = level.DATA.diffs[curDiff].code
-			$PullRequest/RequestList.set_item_text((curDiff * 2) + 1, 'Merged')
-		else:
-			$PullRequest/RequestList.set_item_text((curDiff * 2) + 1, 'Closed')
+		return
 		
-		curDiff += 1
-		$PullRequest/DiffText.text = level.DATA.diffs[curDiff].diff
-		$PullRequest/RequestList.set_item_text((curDiff * 2) + 1, 'In progress...')
+	curDiff += 1
+	$PullRequest/DiffText.text = level.DATA.diffs[curDiff].diff
+	$PullRequest/RequestList.set_item_text((curDiff * 2) + 1, 'In progress...')
 
 
 func game_over() -> void:
-	OS.alert('Game over!')
-	get_tree().change_scene(MenuScene)
+	get_tree().paused = true
+	$GameOverDialog.popup_centered()
 
 
 func next_level() -> void:
-	OS.alert('You win!')
+	get_tree().paused = true
+	$WinDialog.popup_centered()
 
 
 func _on_Timer_timeout() -> void:
@@ -86,3 +88,14 @@ func _on_LabelTimer_timeout() -> void:
 		$TimeLabel.set_text('0' + String(time_left) + ' seconds')
 	else:
 		$TimeLabel.set_text(String(time_left) + ' seconds')
+
+
+func _on_GameOverButton_pressed() -> void:
+	get_tree().paused = false
+	get_tree().change_scene(MenuScene)
+
+
+func _on_NextLevelButton_pressed() -> void:
+	get_tree().paused = false
+	print('win')
+	get_tree().change_scene(MenuScene)

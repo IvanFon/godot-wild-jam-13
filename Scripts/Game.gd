@@ -1,5 +1,7 @@
 extends Control
 
+export (String, FILE) var MenuScene
+
 const LINE_ADD_COLOUR = Color('#2ecc71')
 const LINE_REMOVE_COLOUR = Color('#e74c3c')
 const LEVELS = [
@@ -46,6 +48,7 @@ func next_diff(correct: bool) -> void:
 
 func game_over() -> void:
 	OS.alert('Game over!')
+	get_tree().change_scene(MenuScene)
 
 
 func next_level() -> void:

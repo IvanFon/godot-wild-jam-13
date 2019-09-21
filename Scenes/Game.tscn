@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
-[ext_resource path="res://assets/fonts/Inter-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scenes/LevelSelect.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/fonts/Inter-Regular.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
 use_filter = true
-font_data = ExtResource( 2 )
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 20
@@ -14,19 +15,19 @@ use_filter = true
 extra_spacing_top = -2
 extra_spacing_bottom = -2
 extra_spacing_char = -1
-font_data = ExtResource( 2 )
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 24
 use_mipmaps = true
 use_filter = true
-font_data = ExtResource( 2 )
+font_data = ExtResource( 3 )
 
 [node name="Game" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
-MenuScene = "res://Scenes/Menu.tscn"
+LevelSelectScene = ExtResource( 2 )
 
 [node name="OrigText" type="TextEdit" parent="."]
 anchor_top = 0.5

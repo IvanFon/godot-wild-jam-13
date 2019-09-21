@@ -10,6 +10,7 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
+GameScene = "res://Scenes/Game.tscn"
 completed_labels = [ {
 "node": NodePath("Level1/VBoxContainer/Completed"),
 "num": 1
@@ -171,3 +172,6 @@ margin_right = 140.0
 margin_bottom = 162.0
 custom_fonts/font = ExtResource( 5 )
 text = "Start"
+[connection signal="pressed" from="Level1/VBoxContainer/StartButton" to="." method="_on_StartButton1_pressed"]
+[connection signal="pressed" from="Level 2/VBoxContainer/StartButton" to="." method="_on_StartButton2_pressed"]
+[connection signal="pressed" from="Level 3/VBoxContainer/StartButton" to="." method="_on_StartButton3_pressed"]

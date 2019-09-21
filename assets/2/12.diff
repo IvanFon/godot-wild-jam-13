@@ -1,0 +1,12 @@
+diff --git a/1.js b/2.js
+index 868d2f9..3ab27a0 100644
+--- a/1.js
++++ b/2.js
+@@ -1,5 +1,5 @@
+-function fizzBuzz() {
+-  for (i = 1; i <= 100; i++) {
++function fizzBuzz(range) {
++  for (i = 1; i <= range; i++) {
+     if (i % 3 == 0 and i % 5 == 0) {
+       print('FizzBuzz');
+     } else if (i % 3 == 0) {

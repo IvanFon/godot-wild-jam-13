@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Menu.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Game.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/LevelSelect.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/logo/logo.png" type="Texture" id=3]
 [ext_resource path="res://assets/fonts/Inter-Regular.ttf" type="DynamicFontData" id=4]
 
@@ -38,7 +38,7 @@ font_data = ExtResource( 4 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
-GameScene = ExtResource( 2 )
+LevelSelectScene = ExtResource( 2 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchor_left = 0.5

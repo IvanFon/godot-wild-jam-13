@@ -1,0 +1,13 @@
+diff --git a/4.js b/6.js
+index e8754ef..d270601 100644
+--- a/4.js
++++ b/6.js
+@@ -1,5 +1,6 @@
+-function fizzBuzz(range) {
+-  for (i = 1; i <= range; i++) {
++function fizzBuzz(start, end) {
++  // Count between start and end (inclusive)
++  for (i = start; i <= end; i++) {
+     output = '';
+     if (i % 3 == 0) {
+       output = output + 'Fizz';

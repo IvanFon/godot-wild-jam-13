@@ -1,11 +1,12 @@
 extends Control
 
-export (String, FILE) var MenuScene
+export (PackedScene) var LevelSelectScene: PackedScene
 
 const LINE_ADD_COLOUR = Color('#2ecc71')
 const LINE_REMOVE_COLOUR = Color('#e74c3c')
 const LEVELS = [
 	preload('res://Levels/1.gd'),
+	preload('res://Levels/2.gd'),
 ]
 
 onready var curLevel = get_node("/root/Global").level
@@ -53,6 +54,7 @@ func game_over() -> void:
 
 
 func next_level() -> void:
+	get_node("/root/Global").completed.append(curLevel)
 	get_tree().paused = true
 	$WinDialog.popup_centered()
 
@@ -92,10 +94,9 @@ func _on_LabelTimer_timeout() -> void:
 
 func _on_GameOverButton_pressed() -> void:
 	get_tree().paused = false
-	get_tree().change_scene(MenuScene)
+	get_tree().change_scene_to(LevelSelectScene)
 
 
 func _on_NextLevelButton_pressed() -> void:
 	get_tree().paused = false
-	print('win')
-	get_tree().change_scene(MenuScene)
+	get_tree().change_scene_to(LevelSelectScene)

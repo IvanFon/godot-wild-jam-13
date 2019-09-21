@@ -1,0 +1,173 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Levels.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/level_title_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/fonts/level_func_font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://assets/fonts/level_completed_font.tres" type="DynamicFont" id=4]
+[ext_resource path="res://assets/fonts/level_start_font.tres" type="DynamicFont" id=5]
+
+[node name="Levels" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+completed_labels = [ {
+"node": NodePath("Level1/VBoxContainer/Completed"),
+"num": 1
+}, {
+"node": NodePath("Level 2/VBoxContainer/Completed"),
+"num": 2
+}, {
+"node": NodePath("Level 3/VBoxContainer/Completed"),
+"num": 3
+} ]
+
+[node name="Level1" type="ColorRect" parent="."]
+margin_left = 350.0
+margin_top = 267.5
+margin_right = 510.0
+margin_bottom = 452.5
+color = Color( 0.0906372, 0.119019, 0.175781, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Level1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -70.0
+margin_top = -87.5
+margin_right = 70.0
+margin_bottom = 87.5
+
+[node name="Name" type="Label" parent="Level1/VBoxContainer"]
+margin_right = 140.0
+margin_bottom = 49.0
+custom_fonts/font = ExtResource( 2 )
+text = "Level 1"
+align = 1
+
+[node name="Desc" type="Label" parent="Level1/VBoxContainer"]
+margin_top = 53.0
+margin_right = 140.0
+margin_bottom = 88.0
+custom_fonts/font = ExtResource( 3 )
+text = "fizzBuzz()"
+align = 1
+
+[node name="Completed" type="Label" parent="Level1/VBoxContainer"]
+margin_top = 92.0
+margin_right = 140.0
+margin_bottom = 122.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+text = "Completed"
+align = 1
+
+[node name="StartButton" type="Button" parent="Level1/VBoxContainer"]
+margin_top = 126.0
+margin_right = 140.0
+margin_bottom = 162.0
+custom_fonts/font = ExtResource( 5 )
+text = "Start"
+
+[node name="Level 2" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -80.0
+margin_top = -92.5
+margin_right = 80.0
+margin_bottom = 92.5
+color = Color( 0.0906372, 0.119019, 0.175781, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Level 2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -70.0
+margin_top = -87.5
+margin_right = 70.0
+margin_bottom = 87.5
+
+[node name="Name" type="Label" parent="Level 2/VBoxContainer"]
+margin_right = 140.0
+margin_bottom = 49.0
+custom_fonts/font = ExtResource( 2 )
+text = "Level 2"
+align = 1
+
+[node name="Desc" type="Label" parent="Level 2/VBoxContainer"]
+margin_top = 53.0
+margin_right = 140.0
+margin_bottom = 88.0
+custom_fonts/font = ExtResource( 3 )
+text = "sum()"
+align = 1
+
+[node name="Completed" type="Label" parent="Level 2/VBoxContainer"]
+margin_top = 92.0
+margin_right = 140.0
+margin_bottom = 122.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+text = "Completed"
+align = 1
+
+[node name="StartButton" type="Button" parent="Level 2/VBoxContainer"]
+margin_top = 126.0
+margin_right = 140.0
+margin_bottom = 162.0
+custom_fonts/font = ExtResource( 5 )
+text = "Start"
+
+[node name="Level 3" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 130.0
+margin_top = -92.5
+margin_right = 290.0
+margin_bottom = 92.5
+color = Color( 0.0906372, 0.119019, 0.175781, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Level 3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -70.0
+margin_top = -87.5
+margin_right = 70.0
+margin_bottom = 87.5
+
+[node name="Name" type="Label" parent="Level 3/VBoxContainer"]
+margin_right = 140.0
+margin_bottom = 49.0
+custom_fonts/font = ExtResource( 2 )
+text = "Level 3"
+align = 1
+
+[node name="Desc" type="Label" parent="Level 3/VBoxContainer"]
+margin_top = 53.0
+margin_right = 140.0
+margin_bottom = 88.0
+custom_fonts/font = ExtResource( 3 )
+align = 1
+
+[node name="Completed" type="Label" parent="Level 3/VBoxContainer"]
+margin_top = 92.0
+margin_right = 140.0
+margin_bottom = 122.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+text = "Completed"
+align = 1
+
+[node name="StartButton" type="Button" parent="Level 3/VBoxContainer"]
+margin_top = 126.0
+margin_right = 140.0
+margin_bottom = 162.0
+custom_fonts/font = ExtResource( 5 )
+text = "Start"

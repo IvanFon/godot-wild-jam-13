@@ -7,6 +7,7 @@ const LINE_REMOVE_COLOUR = Color('#e74c3c')
 const LEVELS = [
 	preload('res://Levels/1.gd'),
 	preload('res://Levels/2.gd'),
+	preload('res://Levels/3.gd'),
 ]
 
 onready var curLevel = get_node("/root/Global").level

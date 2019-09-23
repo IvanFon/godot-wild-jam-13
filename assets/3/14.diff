@@ -1,0 +1,14 @@
+diff --git a/1.js b/4.js
+index 62b6b0e..1579d0d 100644
+--- a/1.js
++++ b/4.js
+@@ -1,7 +1,7 @@
+ function vowelCount(word) {
+-  vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
++  vowels = ['a', 'e', 'i', 'o', 'u', 'y'];
+   count = 0;
+-  for (letter in word) {
++  for (letter in word.toLowerCase()) {
+     // Check if letter is in vowels array
+     if (vowels.includes(letter)) {
+       count = count + 1;
